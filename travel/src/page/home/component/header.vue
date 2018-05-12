@@ -1,22 +1,24 @@
 <template>
     <div class="header">
         <div class="header-left">
-            <div class="back-home">&#xe624;</div>
+            <div class="iconfont back-home">&#xe624;</div>
         </div>
         <div class="header-input">
-            <span>&#xe632;</span>
+            <span class="iconfont">&#xe632;</span>
             请输入搜索内容            
         </div>
         <div class="header-right">
-            北京
-           <span>&#xe64a;</span>
+            {{this.city}}
+           <span class="iconfont">&#xe64a;</span>
         </div>
     </div>
 </template>
 <script>
 export default {
   name:"HomeHeader",
- 
+  props:{
+      city:String
+  }
 }
 </script>
 <style lang="less" scoped>
@@ -30,7 +32,7 @@ export default {
         padding:0 .25rem;
         float: left; 
         .back-home{
-            font-size: .5rem;
+            font-size: .35rem;
         }       
     }
     .header-input{
@@ -47,7 +49,7 @@ export default {
         width: 1rem;
         float:right;
         margin-left:.15rem;
-       
+        margin-right: .15rem;
     }
 }
 </style>
