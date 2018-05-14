@@ -50,6 +50,7 @@ export default {
         margin-left:.15rem;
         margin-right: .15rem;
         color: #fff;
+        padding: 0 .2rem 0 0
     }
 }
 </style>

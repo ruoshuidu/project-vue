@@ -5,7 +5,7 @@
         </div>
         <div class="search-content" ref="search" v-show="keyword">
             <ul>
-                <li  v-for="item of list" :key="item.id" class="search-item border-bottom">{{item.name}}</li>
+                <li  v-for="item of list" :key="item.id" class="search-item border-bottom" @click="handCityClick(item.name)">{{item.name}}</li>
                 <li class="search-item border-bottom" v-show="!list.length">没有找到匹配城市</li>
             </ul>
         </div>
@@ -23,6 +23,12 @@ export default {
           keyword:"",
           list:[],
           timer:null
+      }
+  },
+  methods: {
+      handCityClick(city){
+          this.$store.dispatch('changeCity',city)
+          this.$router.push('/')
       }
   },
   mounted () {
