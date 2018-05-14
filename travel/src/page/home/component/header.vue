@@ -7,18 +7,17 @@
             <span class="iconfont">&#xe632;</span>
             请输入搜索内容            
         </div>
-        <div class="header-right">
-            {{this.city}}
-           <span class="iconfont">&#xe64a;</span>
-        </div>
+        <router-link to="/city">
+            <div class="header-right">
+                {{this.$store.state.city}}
+                <span class="iconfont">&#xe64a;</span>
+            </div>
+        </router-link>
     </div>
 </template>
 <script>
 export default {
-  name:"HomeHeader",
-  props:{
-      city:String
-  }
+  name:"HomeHeader"
 }
 </script>
 <style lang="less" scoped>
@@ -50,6 +49,7 @@ export default {
         float:right;
         margin-left:.15rem;
         margin-right: .15rem;
+        color: #fff;
     }
 }
 </style>
