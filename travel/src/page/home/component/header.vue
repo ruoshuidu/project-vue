@@ -45,7 +45,6 @@ export default {
         line-height: .62rem;
     }
     .header-right{
-        width: 1rem;
         float:right;
         margin-left:.15rem;
         margin-right: .15rem;
